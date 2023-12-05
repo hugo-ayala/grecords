@@ -1,0 +1,118 @@
+{
+  "name": "41742006-da01-428b-9558-779e620bec2f",
+  "displayName": "Payment Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Alright $session.params.firstname! We will make use of Google Pay, that's connected to your email account: $session.params.email." ]
+      },
+      "languageCode": "en"
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.merch != \"Digital Album\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Shipping costs an additional 5 dollars. This will make the total price $$sys.func.TO_TEXT($sys.func.ADD($session.params.price, 5))." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Your merchandise will be shipped to:" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.firstname $session.params.lastname" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.address" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.zipcode $session.params.city" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "$session.params.country" ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "To continue the order process please explicitly say \"I confirm\". Do you want to confirm your $session.params.artist $session.params.merch order?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "The total costs will be: $$session.params.price." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "After purchasing the digital album, you will receive an email with the download link." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "To continue the order process please explicitly say \"I confirm\"." ]
+            },
+            "languageCode": "en"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "Do you want to confirm your $session.params.artist $session.params.merch order?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "confirm.proceed.order",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you for your order! Your merchandise will be shipped today!" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Here's the order number: ABCD123", "Have a good day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "aabbce52-0bf6-42d2-96fc-3f20d514c20f"
+  } ]
+}

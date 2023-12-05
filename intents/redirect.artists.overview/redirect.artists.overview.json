@@ -1,0 +1,11 @@
+{
+  "name": "500bb31c-bd74-4bab-85db-e9517c048571",
+  "displayName": "redirect.artists.overview",
+  "parameters": [ {
+    "id": "artists",
+    "entityType": "@Artists"
+  } ],
+  "priority": 500000,
+  "description": "Artists overview: The bands supported by the label",
+  "numTrainingPhrases": 13
+}

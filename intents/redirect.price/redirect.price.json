@@ -1,0 +1,13 @@
+{
+  "name": "d6479f82-ea9e-4931-943a-cb80300ba2a6",
+  "displayName": "redirect.price",
+  "parameters": [ {
+    "id": "merch",
+    "entityType": "@Merch"
+  }, {
+    "id": "shirtsize",
+    "entityType": "@ShirtSize"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 8
+}

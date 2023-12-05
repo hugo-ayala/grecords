@@ -1,0 +1,161 @@
+{
+  "name": "58c38ec6-46bb-4034-953d-dca89bea8212",
+  "tags": [ "#catalog,", "#shirts,", "#t-shirt,", "#TheGoogleDolls" ],
+  "displayName": "Buy Google Dolls t-shirt size M",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Welcome, I am the virtual agent of G-Records, a fictional rock label. You can order artists merchandise, ask questions about your order or shipping, and I can tell you more which artists are currently signed with us. How can I help?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Which artists are signed with your label?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.artists.overview"
+      },
+      "currentPage": {
+        "name": "Artist Overview",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "The following bands are signed with G-Records: Alice Googler, G's N' Roses, The Goo Fighters and The Google Dolls." ]
+      }, {
+        "text": [ "From which of these artists would you like to order merchandise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "The Google Dolls"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Product Overview",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "The Google Dolls, great choice! Rock on!" ]
+      }, {
+        "text": [ "We sell shirts, music or the tour movie." ]
+      }, {
+        "text": [ "Which merchandise item do you want?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I am interested in buying a shirt"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.shirts"
+      },
+      "currentPage": {
+        "name": "Shirts",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Do you want a longsleeve or a t-shirt?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "A t-shirt"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Shirt Size",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "What shirt size do you want?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Medium"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Confirmation",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "A T-shirt of The Google Dolls size: M costs $25. Shall I continue to order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1701047005,
+    "nanos": 43617000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "1de87668-ee19-4118-beae-86d294c8a96e",
+  "displayName": "One Prompt order status check",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "What's the status of order DEFG222"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "My Order Status",
+        "flow": "My Order"
+      },
+      "textResponses": [ {
+        "text": [ "Your order DEFG222 has been shipped, it can take up to approx 2 weeks before you will receive your items." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "My Order"
+      }
+    },
+    "expectations": {
+      "expectedSessionParameters": [ {
+        "key": "ordernumber",
+        "value": "DEFG222"
+      } ]
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1700623317,
+    "nanos": 282563000
+  },
+  "testConfig": {
+    "trackingParameters": [ "ordernumber" ],
+    "flow": "My Order",
+    "page": "My Order Status"
+  }
+}

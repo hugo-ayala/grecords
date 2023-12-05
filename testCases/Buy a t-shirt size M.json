@@ -1,0 +1,58 @@
+{
+  "name": "495fd055-3835-4f41-b08a-1adbac205a9f",
+  "tags": [ "#shirts,", "#t-shirt,", "#TheGoogleFighters" ],
+  "displayName": "Buy a t-shirt size M",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Buy a t-shirt size M"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.product"
+      },
+      "currentPage": {
+        "name": "Product",
+        "flow": "Catalog"
+      },
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "The Goo Fighters!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Confirmation",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "A T-shirt of The Goo Fighters size: M costs $25. Shall I continue to order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1701053452,
+    "nanos": 835035000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
+  }
+}

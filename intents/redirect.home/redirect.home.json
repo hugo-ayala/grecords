@@ -1,0 +1,10 @@
+{
+  "name": "9d371410-8332-4b05-b984-5e907e9c91fe",
+  "displayName": "redirect.home",
+  "parameters": [ {
+    "id": "artists",
+    "entityType": "@Artists"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 12
+}

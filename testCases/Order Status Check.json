@@ -1,0 +1,102 @@
+{
+  "name": "5be9be87-648a-42af-96c9-39cdd128dc01",
+  "displayName": "Order Status Check",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "About my order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.my.order"
+      },
+      "currentPage": {
+        "name": "My Order",
+        "flow": "My Order"
+      },
+      "textResponses": [ {
+        "text": [ "I can look up the status of your order, or I can cancel an order." ]
+      }, {
+        "text": [ "What's the order number? For example ABCD123." ]
+      } ],
+      "currentFlow": {
+        "name": "My Order"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "ABCD123"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "My Order",
+        "flow": "My Order"
+      },
+      "textResponses": [ {
+        "text": [ "And do you want to Cancel your order, or should I look up the status?" ]
+      } ],
+      "currentFlow": {
+        "name": "My Order"
+      }
+    },
+    "expectations": {
+      "expectedSessionParameters": [ {
+        "key": "ordernumber",
+        "value": "ABCD123"
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Status"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.my.order.status"
+      },
+      "currentPage": {
+        "name": "My Order Status",
+        "flow": "My Order"
+      },
+      "textResponses": [ {
+        "text": [ "Your order ABCD123 has been shipped, it can take up to approx 2 weeks before you will receive your items." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "My Order"
+      }
+    },
+    "expectations": {
+      "expectedSessionParameters": [ {
+        "key": "ordernumber",
+        "value": "ABCD123"
+      } ]
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1700623270,
+    "nanos": 492932000
+  },
+  "testConfig": {
+    "trackingParameters": [ "ordernumber" ],
+    "flow": "My Order",
+    "page": "My Order Status"
+  }
+}

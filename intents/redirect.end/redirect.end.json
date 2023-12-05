@@ -1,0 +1,13 @@
+{
+  "name": "3ed8342f-b9ce-4834-a6d0-5783b3fbd078",
+  "displayName": "redirect.end",
+  "parameters": [ {
+    "id": "shirtsize",
+    "entityType": "@ShirtSize"
+  }, {
+    "id": "artists",
+    "entityType": "@Artists"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 10
+}

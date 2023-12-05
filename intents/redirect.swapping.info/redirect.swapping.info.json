@@ -1,0 +1,10 @@
+{
+  "name": "6fe581db-c21a-4ed4-8d9d-38797580cf4f",
+  "displayName": "redirect.swapping.info",
+  "parameters": [ {
+    "id": "merch",
+    "entityType": "@Merch"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

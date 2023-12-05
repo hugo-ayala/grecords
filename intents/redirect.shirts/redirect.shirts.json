@@ -1,0 +1,10 @@
+{
+  "name": "fb47b3e8-6d15-455c-a79f-973bbe626849",
+  "displayName": "redirect.shirts",
+  "parameters": [ {
+    "id": "artists",
+    "entityType": "@Artists"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

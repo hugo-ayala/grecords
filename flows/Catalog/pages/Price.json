@@ -1,0 +1,77 @@
+{
+  "name": "69da3cc5-a411-44a2-a6f6-dd69c2f2e16e",
+  "displayName": "Price",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.category = \"shirts\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A t-shirt costs $25 and a longsleeve costs $30." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.category = \"music\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A CD costs $15. The digital album on MP3 costs $10." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A t-shirt costs $25 and a longsleeve costs $30. A CD costs $15 and a digital album on MP3 $10. In case you are interested in the Tour Movie, that one is $25." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.category = shirts AND $session.params.merch = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Shirts",
+    "name": "03df207a-bd8f-46f0-a67b-e07837c69d3d"
+  }, {
+    "condition": "$session.params.category = shirts AND $session.params.size = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Shirt Size",
+    "name": "7565007a-bf09-47c8-a449-cd95b9f8e6a6"
+  }, {
+    "condition": "$session.params.category = music AND $session.params.merch = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Music",
+    "name": "eec0e999-d3c3-424b-9fb0-add96e8cb89b"
+  }, {
+    "condition": "$session.params.category = music AND $session.params.merch = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Carrier",
+    "name": "87da3f41-9ae8-4454-bdfc-0e533bfaa44e"
+  }, {
+    "condition": "$session.params.category = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product Overview",
+    "name": "76cc9044-d075-44a8-86a0-b2c96d822aed"
+  } ]
+}

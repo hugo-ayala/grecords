@@ -1,0 +1,80 @@
+{
+  "name": "018a95cd-4227-4c32-abce-9cefee3456f1",
+  "tags": [ "#catalog,", "#music,", "#CD,", "#GsNRoses,", "#live" ],
+  "displayName": "Purchase music of G's N' Roses",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Purchase music of G's N' Roses"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.music"
+      },
+      "currentPage": {
+        "name": "Music",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "We have a Greatest Hits Album or the Live Album. Which one do you want?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Live"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Carrier",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Do you want this album on CD or MP3?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "CD"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Product",
+        "flow": "Catalog"
+      },
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1701053566,
+    "nanos": 336583000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "72b239ce-1866-462c-886a-bdf663d1dc7e",
+  "tags": [ "#catalog,", "#shirts,", "#t-shirt,", "#AliceGoogler" ],
+  "displayName": "Buy the Alice Googler t-shirt",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Buy the Alice Googler t-shirt."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Product Overview",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Which merchandise item do you want?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Buy the Alice Googler t-shirt."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Shirt Size",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Alright! T-shirt of Alice Googler, let's go!" ]
+      }, {
+        "text": [ "I would also need to know which shirt size you need!" ]
+      }, {
+        "text": [ "What shirt size do you want?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "XL"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Confirmation",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "A T-shirt of Alice Googler size: XL costs $25. Shall I continue to order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1701047647,
+    "nanos": 588836000
+  },
+  "testConfig": {
+    "flow": "Catalog",
+    "page": "Product Overview"
+  }
+}
